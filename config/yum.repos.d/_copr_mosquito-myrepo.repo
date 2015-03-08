@@ -1,0 +1,6 @@
+[mosquito-myrepo]
+name=Copr repo for myrepo owned by mosquito
+baseurl=https://copr-be.cloud.fedoraproject.org/results/mosquito/myrepo/fedora-$releasever-$basearch/
+skip_if_unavailable=True
+gpgcheck=0
+enabled=1

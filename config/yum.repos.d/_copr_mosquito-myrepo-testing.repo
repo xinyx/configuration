@@ -1,0 +1,6 @@
+[mosquito-myrepo-testing]
+name=Copr repo for myrepo-testing owned by mosquito
+baseurl=http://copr-be.cloud.fedoraproject.org/results/mosquito/myrepo-testing/fedora-$releasever-$basearch/
+skip_if_unavailable=True
+gpgcheck=0
+enabled=1
