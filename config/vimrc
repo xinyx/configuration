@@ -1,5 +1,5 @@
 vmap <C-c> "+y
-nmap <C-p> "+p
+nmap <C-v> "+p
 
 "set cursorline
 
@@ -205,17 +205,18 @@ filetype plugin on
 hi PmenuSel ctermfg=4 ctermbg=0
 
 
-":inoremap ( ()<ESC>i
-":inoremap ) <c-r>=ClosePair(')')<CR>
+:inoremap ( ()<ESC>i
+:inoremap ) <c-r>=ClosePair(')')<CR>
 ":inoremap { {<ENTER>}<UP><end><ESC>i<ENTER><RIGHT><ENTER>
-:inoremap { {<ENTER>}<UP><end><ENTER>
+":inoremap { {<ENTER>}<UP><end><ENTER>
+:inoremap { {}<LEFT>
 :inoremap } <c-r>=ClosePair('}')<CR>
 ":inoremap < <><ESC>i
 ":inoremap > <c-r>=ClosePair('>')<CR>
-":inoremap [ []<ESC>i
-":inoremap ] <c-r>=ClosePair(']')<CR>
-":inoremap " ""<ESC>i
-":inoremap ' ''<ESC>i
+:inoremap [ []<ESC>i
+:inoremap ] <c-r>=ClosePair(']')<CR>
+"":inoremap " ""<ESC>i
+"":inoremap ' ''<ESC>i
 
 function ClosePair(char)
 if getline('.')[col('.') - 1] == a:char
@@ -229,3 +230,5 @@ endfunction
 set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
 set termencoding=utf-8
 set encoding=utf-8
+
+"au BufEnter /home/xinyx/software/Edison/linux-kernel/* setlocal tags+=/home/xinyx/software/Edison/linux-kernel/tags
