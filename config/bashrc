@@ -94,6 +94,7 @@ PS1="\[\e[01;33m\]\u\[\e[0m\]\[\e[00;37m\] \[\e[0m\]\[\e[01;37m\]\W\[\e[0m\]\[\e
 alias open='xdg-open'
 alias j="autojump"
 alias la='ls -a'
+alias vim='vimx'
 
 export GTK_IM_MODULE=fcitx  
 export QT_IM_MODULE=fcitx  
