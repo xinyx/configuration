@@ -233,7 +233,7 @@ set encoding=utf-8
 
 "set t_Co=256
 set background=dark
-let g:solarized_termcolors=256
+"let g:solarized_termcolors=256
 colorscheme solarized 
 
 "au BufEnter /home/xinyx/software/Edison/linux-kernel/* setlocal tags+=/home/xinyx/software/Edison/linux-kernel/tags
