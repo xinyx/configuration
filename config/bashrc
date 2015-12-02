@@ -96,6 +96,10 @@ alias j="autojump"
 alias la='ls -a'
 alias vim='vimx'
 
+# use solarized color
+eval `dircolors .dircolors.ansi-light`
+export TERM=konsole-256color
+
 export GTK_IM_MODULE=fcitx  
 export QT_IM_MODULE=fcitx  
 export XMODIFIERS="@im=fcitx"
