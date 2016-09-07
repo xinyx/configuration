@@ -97,9 +97,20 @@ alias la='ls -a'
 alias vim='vimx'
 
 # use solarized color
-eval `dircolors .dircolors.ansi-light`
+eval `dircolors ~/.dircolors.ansi-light`
 export TERM=konsole-256color
 
 export GTK_IM_MODULE=fcitx  
 export QT_IM_MODULE=fcitx  
 export XMODIFIERS="@im=fcitx"
+
+export NVM_DIR="/home/xinyx/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+export PATH=$PATH:"/home/xinyx/software/node-v4.4.7-linux-x64/bin:/usr/java/jdk1.8.0_101/bin"
+export JAVA_HOME="/usr/java/jdk1.8.0_101"
+
+#有道翻译
+t() {
+	wget -qO - "http://fanyi.youdao.com/openapi.do?keyfrom=leecade&key=54015339&type=data&doctype=json&version=1.1&q=$1" | grep --color=auto -oP '(?<="explains":\[")[^}]*' | sed 's/","/\n/g' | sed 's/"]//g' | grep '.*'
+}
